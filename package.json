@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "a tryout for modules",
   "scripts": {
-    "prewatch": "cmds\\assets-to-unpacked-dist.bat",
-    "prebuild": "npm update && cmds\\assets-to-unpacked-dist.bat",
+    "prewatch": "cmds\\clear-previous-output.bat && cmds\\assets-to-unpacked-dist.bat",
+    "prebuild": "npm update && npm run prewatch",
     "watch": "webpack --config webpack.config.js --watch --mode development",
-    "build": "webpack --config webpack.config.js",
+    "build": "webpack --config webpack.config.js --mode production",
     "postbuild": "cmds\\chrome-pack.bat"
   },
   "dependencies": {},

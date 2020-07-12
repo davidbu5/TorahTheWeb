@@ -1,7 +1,9 @@
 module.exports = {
-    entry: __dirname + "/src/background.ts",
+    entry: {
+        background: __dirname + "/src/background.ts",
+        popup: __dirname + "/src/popup/popup.ts"
+    },
     output: {
-        filename: 'background.js',
         path: __dirname + "/unpacked-dist",
     },
     resolve: {

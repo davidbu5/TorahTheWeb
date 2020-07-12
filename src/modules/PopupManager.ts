@@ -4,7 +4,9 @@ export let isPopupOpen = false;
 
 export function initPopupEvent() {
     
-    addEventListener('popupOpenState', (event: CustomEvent) => {
+    window.addEventListener('popupOpenState', (event: CustomEvent<{isOpen: boolean}>) => {
+        console.log(event.detail.isOpen);
+        
         // Can put statistics here
     });
 }

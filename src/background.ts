@@ -1,7 +1,7 @@
 ﻿
 import * as Popup from './modules/PopupManager';
 
-function init() {
+((function init() {
 
     Popup.initPopupEvent();
-}
+})())

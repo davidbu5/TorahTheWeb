@@ -1,3 +1,4 @@
+@echo off
 rd dist /s/q
 mkdir dist
 start chrome --pack-extension="%CD%\unpacked-dist" --pack-extension-key="%CD%\key.pem"
