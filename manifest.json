@@ -1,0 +1,25 @@
+{
+  "name": "אלישע",
+  "description": "מערכת להפצת הודעות",
+  "version": "1.0.0",
+  "permissions": [
+    "notifications",
+    "storage",
+    "tabs",
+    "background",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": [ "background.js" ]
+  },
+  "browser_action": {
+    "default_title": "אלישע",
+    "default_icon": {
+      "19": "elisha.png"
+    }
+  },
+  "icons": {
+    "48": "elisha38.png"
+  },
+  "manifest_version": 2
+}
