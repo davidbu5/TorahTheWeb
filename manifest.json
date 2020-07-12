@@ -6,7 +6,8 @@
     "notifications",
     "storage",
     "tabs",
-    "background"
+    "background",
+    "activeTab"
   ],
   "background": {
     "scripts": [ "background.js" ]
