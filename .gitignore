@@ -1,6 +1,6 @@
 
 node_modules/
-unpacked_dist/
+unpacked-dist/
 dist/
 *.crx
 *.pem
