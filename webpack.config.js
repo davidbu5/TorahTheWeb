@@ -1,14 +1,12 @@
-const webpack = require('webpack');
-
 module.exports = {
-    entry: "./background.ts",
+    entry: __dirname + "/src/background.ts",
     output: {
         filename: 'background.js',
         path: __dirname + "/unpacked-dist",
     },
     resolve: {
         // Add '.ts' and '.tsx' as a resolvable extension.
-        extensions: ['.js', '.ts', '.tsx']
+        extensions: ['.js', '.ts']
     },
     module: {
         rules: [
@@ -20,9 +18,4 @@ module.exports = {
         ]
     },
     devtool: 'source-map',
-    plugins: [
-        new webpack.DefinePlugin({
-            'SERVER_PATH': process.env.SERVER_PATH || JSON.stringify("localhost")
-        })
-    ]
 }

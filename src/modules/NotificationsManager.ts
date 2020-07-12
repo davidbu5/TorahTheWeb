@@ -1,4 +1,10 @@
-W
+interface IMessage {
+    title: string;
+    content: string;
+    iconSrcUrl: string;
+    link: string;
+}
+
 const NotificationsDictionary: { [notificationId: string]: IMessage } = {};
 
 export function createNotification(message: IMessage) {

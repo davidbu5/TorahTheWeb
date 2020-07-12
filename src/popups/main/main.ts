@@ -4,6 +4,6 @@ function sendPopupOpenStateEvent(isOpen) {
     var extension = chrome.extension.getBackgroundPage();
     extension.dispatchEvent(new CustomEvent("popupOpenState", { detail: { isOpen: isOpen } }));
 }
-const popupFrame = document.getElementById('popupFrame');
+const popupFrame = document.getElementById('popupFrame') as HTMLIFrameElement;
 var SERVER_PATH="localhost";
 popupFrame.src = "https://" + SERVER_PATH + "/Client";
