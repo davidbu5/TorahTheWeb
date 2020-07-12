@@ -1,8 +1,4 @@
-import * as Elisha from './ElishaAPI';
-import * as Icon from './IconManager';
-
-import { IMessage } from '../../ClientConnector/src/interfaces/models/message.model';
-
+W
 const NotificationsDictionary: { [notificationId: string]: IMessage } = {};
 
 export function createNotification(message: IMessage) {
@@ -46,8 +42,7 @@ chrome.notifications.onClicked.addListener((notificationId: string) => {
 
     chrome.notifications.clear(notificationId, (isCleared: boolean) => {
         if (isCleared) {
-            Elisha.Instance().Message.markMessageAsRead(message._id);
-            delete NotificationsDictionary.notificationId;
+            
         }
     });
 });

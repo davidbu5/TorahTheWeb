@@ -1,4 +1,3 @@
-import * as Elisha from './ElishaAPI';
 
 export function setBadgeText(text: string | number) {
 
@@ -16,12 +15,6 @@ export function setBadgeText(text: string | number) {
             });
         }
     }
-}
-
-export function updateUnreadCount() {
-    Elisha.Instance().Message.getMyMessagesUnreadCount().then(unreadCount => {
-        setBadgeText(unreadCount);
-    });
 }
 
 chrome.browserAction.setBadgeBackgroundColor({
