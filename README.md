@@ -1,2 +1,2 @@
 # TorahTheWeb
-Enrich Torah learning in the web.
+Enrich Torah learning across the web.
